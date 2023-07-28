@@ -1,0 +1,252 @@
+/* Estilos gerais */
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  h2{
+    font-size: 20px;
+    color: #a8a8a8;
+  }
+  
+  
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .note-container {
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .note {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 20px; /* Aumentamos o espaçamento interno */
+    border-radius: 8px;
+    background-color: #ffd800; /* Cor de fundo amarelo (pode ser alterada) */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .note.completed {
+    opacity: 0.6; /* Opacidade reduzida para notas concluídas */
+  }
+  
+  .note h3 {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+  }
+  
+  .note .checkbox {
+    top: 10px; /* Ajustamos a posição para ficar mais centralizado verticalmente */
+    left: 10px; /* Ajustamos a posição para ficar mais à esquerda */
+    cursor: pointer;
+    font-size: 20px; /* Aumentamos o tamanho do checkbox */
+    margin-right: 3px; 
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 10px; /* Ajustamos a posição para ficar mais centralizado verticalmente */
+    right: 10px; /* Ajustamos a posição para ficar mais à direita */
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  /* Estilos para a caixa de texto */
+  textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ffd800; /* Cor de fundo amarelo (pode ser alterada) */
+    color: #fff;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Cor de fundo azul (pode ser alterada) */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Cor de fundo azul mais escura (pode ser alterada) */
+  }
+  
+  /* Estilos para o cabeçalho de data */
+  h3 {
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    font-size: small;
+  }
+
+  .date-header {
+    cursor: pointer;
+    margin-top: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+  }
+  
+  .date-notes-list {
+    margin-bottom: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .fa-trash-alt:before {
+    color: #c0a80e;
+  }
+  
+  
+  /* Estilos para o tema dark */
+.dark-theme {
+    background-color: #222;
+    color: #fff;
+  }
+
+  .dark-theme .container{
+    background-color: #1D1D1D;
+  }
+  
+  .dark-theme .note-container {
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.15);
+    background-color: #121212;
+  }
+
+  .dark-theme .fa-trash-alt:before {
+    color: #ccc;
+  }
+
+  .dark-theme #note-text {
+    background-color: #242424;
+    color: #ddd;
+  }
+
+  .dark-theme #theme-select {
+    background-color: #242424;
+    color: #ddd;
+  }
+
+  .dark-theme #theme-select option {
+    color: #ddd;
+  }
+  
+  .dark-theme .note {
+    background-color: #444;
+    color: #fff;
+  }
+  
+  .dark-theme .note.completed {
+    opacity: 0.6;
+  }
+  
+  .dark-theme .note h3 {
+    color: #ccc;
+  }
+  
+  .dark-theme .note .checkbox {
+    color: #fff;
+  }
+  
+  .dark-theme .delete-btn {
+    color: #ccc;
+  }
+
+  .dark-theme .toolbar {
+    background-color: #1b1b1b;
+  }
+
+  .dark-theme .toolbar button {
+    background-color: #1b1b1b;
+    color: #ddd;
+  }
+  
+  /* Estilos para o tema light */
+  .note-container {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .note {
+    background-color: #ffd800;
+    color: #000;
+  }
+  
+  .note.completed {
+    opacity: 0.6;
+  }
+  
+  .note h3 {
+    color: #888;
+  }
+  
+  .note .checkbox {
+    color: #000;
+  }
+  
+  .delete-btn {
+    color: #888;
+  }
+
+
+/* Estilos para a caixa de ferramentas */
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px 8px 0 0;
+    padding: 5px;
+  }
+  
+  .toolbar button {
+    cursor: pointer;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Estilos para a caixa de texto */
+  .textarea-container {
+    position: relative;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: vertical;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    outline: none; /* Removemos a borda ao focar */
+  }
