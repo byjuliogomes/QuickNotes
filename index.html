@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickNotes - Organizador de notas rápidas</title>
+  <!-- Adicione o link para o Bootstrap, Font Awesome e Google Fonts -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/icon48.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <div class="note-container">
+        <h1>📝QuickNotes</h1>
+        <h2>Organizador de notas rápidas</h2>
+        <!-- Caixa de Ferramentas -->
+        <div class="toolbar">
+            <button onclick="formatText('bold')" title="Negrito"><i class="fas fa-bold"></i></button>
+            <button onclick="formatText('italic')" title="Itálico"><i class="fas fa-italic"></i></button>
+            <button onclick="formatText('underline')" title="Sublinhado"><i class="fas fa-underline"></i></button>
+            <button onclick="formatText('strikethrough')" title="Tachado"><i class="fas fa-strikethrough"></i></button>
+            <button onclick="insertEmoji('🙂')" title="Emoji Feliz">🙂</button>
+            <button onclick="insertEmoji('😃')" title="Emoji Sorridente">😃</button>
+            <button onclick="insertEmoji('😉')" title="Emoji Piscando">😉</button>
+          </div>
+
+      <!-- Caixa de Texto -->
+      <div class="textarea-container">
+        <textarea id="note-text" placeholder="Digite sua nota aqui"></textarea>
+      </div>
+        <button id="save-btn" class="btn btn-primary">Salvar Nota</button>
+        <div id="notes-list" class="mt-3"
+          <!-- Notas salvas aparecerão aqui -->
+        </div>
+        <!-- Área de configuração de tema -->
+      <div class="theme-config">
+        <label for="theme-select">Escolha o tema:</label>
+        <select id="theme-select">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </div>
+
+      
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
